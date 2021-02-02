@@ -19,7 +19,6 @@ const game = () => {
     };
 
     const restartGame = (winner) => {
-        updateScore();
         
         const introScreen = document.querySelector('.intro');
         const match = document.querySelector('.match');
@@ -40,6 +39,8 @@ const game = () => {
             playBtn.textContent = "Play again?";
         }, 2000); // 2 seconds
         
+        updateScore();
+
         playBtn.addEventListener('click', () => {
             match.classList.remove('fadeOut');
             introScreen.classList.remove('fadeIn');
@@ -99,7 +100,7 @@ const game = () => {
         const winner = document.querySelector('.winner');
         // Checking for a tie
         if (playerChoice === computerChoice) {
-            winner.textContent = 'It is a tie';
+            winner.textContent = 'It\'s a tie';
             return;
         }
         // Checking for Rock
@@ -134,9 +135,9 @@ const game = () => {
         }
         updateScore();
 
-        if (cScore == 5 || pScore == 5) {
+        if (cScore == 10 || pScore == 10) {
             let winner = "";
-            if (cScore == 5) {
+            if (cScore == 10) {
                 winner = "Computer";
             } else {
                 winner = "Player"
