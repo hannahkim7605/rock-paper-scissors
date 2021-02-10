@@ -1,7 +1,7 @@
 # Rock Paper Scissors #
 
 This project was created based on the rock paper and scissors tutorial by Dev Ed, but with some improvements.
-Once the player or the computer reach the maximum wins (10), the game restarts.
+Once the player or the computer reaches the maximum wins (10), the game restarts.
 
 ## How to install ##
 
